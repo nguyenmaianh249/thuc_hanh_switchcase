@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Tính điểm thi đại học </title>
+</head>
+
+<body>
+    Điểm toán : <input type="text" id="diem_toan"><br/> Điểm văn : <input type="text" id="diem_van"><br/> Điểm anh : <input type="text" id="diem_anh"><br/>
+
+    <br/> Tên khu vực :
+    <input type="text" id="khu_vuc"> <br/>
+    <button onclick="tinhdiem()">Tính điểm </button><br/> Tổng diểm là : <span id="tongdiem"></span>
+
+    <script>
+        function tinhdiem() {
+            let diemtoan = Number(document.getElementById("diem_toan").value)
+            let diemvan = Number(document.getElementById("diem_van").value)
+            let diemanh = Number(document.getElementById("diem_anh").value)
+            let khuvuc = document.getElementById("khu_vuc").value
+            let a = diemtoan + diemvan + diemanh
+            switch (khuvuc) {
+                case "KV1":
+                    tong = a + 0.75
+                    document.getElementById("tongdiem").innerHTML = tong
+                    break;
+                case "KV2-NT":
+                    tong = a + 0.5
+                    document.getElementById("tongdiem").innerHTML = tong
+                    break;
+                case "KV2":
+                    tong = a + 0.25
+                    document.getElementById("tongdiem").innerHTML = tong
+                    break;
+                case "KV3":
+                    tong = a
+                    document.getElementById("tongdiem").innerHTML = tong
+            }
+        }
+    </script>
+</body>
+
+</html>

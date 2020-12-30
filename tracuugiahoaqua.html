@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Tra cứu giá hoa quả </title>
+</head>
+
+<body>
+    Tên loại quả :
+    <input type="text" id="hoa_qua"> <br/>
+    <button onclick="tracuu()">Tra cứu</button>
+    <br/> Gía tiền của loại quả đó là : <span id="gia_tien" style="color: red ;"></span>
+    <script>
+        function tracuu() {
+            let hoaqua = document.getElementById("hoa_qua").value
+            let giatien = document.getElementById("gia_tien")
+            switch (hoaqua) {
+                case "Ổi":
+                case "Dưa hấu":
+                    giatien.innerHTML = "20000VNĐ/KG"
+                    break;
+                case "Táo":
+                case "Xoài":
+                    giatien.innerHTML = "30000VNĐ/KG"
+                    break;
+                case "Cam":
+                case "Chôm chôm":
+                    giatien.innerHTML = "40000VNĐ/KG"
+                    break;
+                case "Măng cụt":
+                    giatien.innerHTML = "50000VNĐ/KG"
+                    break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

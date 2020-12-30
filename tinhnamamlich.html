@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>Tính năm âm lịch </title>
+</head>
+
+<body>
+    Nhập năm dương lịch : <input type="text" id="namduonglich">
+    <br/>
+    <button onclick="tinh()">Tính năm âm lịch </button>
+    <br/> Năm âm lịch là : <span id='nam_am_lich'></span>
+    <script>
+        function tinh() {
+            let namduonglich = Number(document.getElementById("namduonglich").value)
+            let a = namduonglich % 10
+            let b = namduonglich % 12
+            switch (a) {
+                case a = 0:
+                    Can = "Canh"
+                    break;
+                case a = 1:
+                    Can = "Tân"
+                    break;
+                case a = 2:
+                    Can = "Nhâm"
+                    break;
+                case a = 3:
+                    Can = "Qúy"
+                    break;
+                case a = 4:
+                    Can = "Gíap"
+                    break;
+                case a = 5:
+                    Can = "Ất"
+                    break;
+                case a = 6:
+                    Can = "Bính"
+                    break;
+                case a = 7:
+                    Can = "Đinh"
+                    break;
+                case a = 8:
+                    Can = "Mậu"
+                    break;
+                case a = 9:
+                    Can = "Kỷ"
+                    break;
+            }
+            switch (b) {
+                case b = 0:
+                    Chi = "Thân"
+                    break;
+                case a = 1:
+                    Chi = "Dậu"
+                    break;
+                case a = 2:
+                    Chi = "Tuất"
+                    break;
+                case a = 3:
+                    Chi = "Hợi"
+                    break;
+                case a = 4:
+                    Chi = "Tý"
+                    break;
+                case a = 5:
+                    Chi = "Sửu"
+                    break;
+                case a = 6:
+                    Chi = "Dần"
+                    break;
+                case a = 7:
+                    Chi = "Mẹo"
+                    break;
+                case a = 8:
+                    Chi = "Thìn"
+                    break;
+                case a = 9:
+                    Chi = "Tỵ"
+                    break;
+                case a = 10:
+                    Chi = "Ngọ"
+                    break;
+                case a = 11:
+                    Chi = "Mùi"
+                    break;
+
+            }
+            nam_am_lich.innerHTML = Can + " " + Chi
+        }
+    </script>
+</body>
+
+</html>
